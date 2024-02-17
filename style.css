@@ -25,7 +25,8 @@ video {
 
 a {
   text-decoration: none;
-  color: black;
+  color: #BF6868;
+  animation: color-shift 2s infinite both;
 }
 
 body {
@@ -138,7 +139,6 @@ body {
   position: relative;
   float: right;
   width: 30%;
-  animation: color-shift 5s infinite forwards;
 }
 
 .about__content img:last-of-type {
@@ -190,6 +190,10 @@ body {
   font-size: min(calc(0.2545rem + 2.7273vw), 2rem);
 }
 
+.keyword {
+  color: #BF6868;
+}
+
 @keyframes bounce {
   0% {
     transform: 
@@ -218,11 +222,14 @@ body {
 }
 
 @keyframes color-shift {
-  from {
+  0% {
     filter: hue-rotate(0);
   }
-  to {
-    filter: hue-rotate(360deg);
+  50% {
+    filter: hue-rotate(-180deg);
+  }
+  100% {
+    filter: hue-rotate(0);
   }
 }
 
