@@ -13,6 +13,13 @@
 :root {
   --max-width: 800px;
   --divider: 3rem;
+  --dark: #505050;
+  --light: #ffe1cf;
+  /* --light: #96897B; */
+  --primary: #bf7e68;
+  --primary-dk: #6b4f5a;
+  --accent-dk: #efa639;
+  --accent-lt: #16ba91;
 }
 
 img,
@@ -24,16 +31,18 @@ video {
 }
 
 a {
-  text-decoration: none;
-  color: #BF6868;
-  animation: color-shift 3s linear infinite;
+  color: var(--accent-dk);
+  text-decoration-skip-ink: none;
+  text-decoration-color: var(--accent-lt);
+  font-size: min(calc(1.1364rem + 6.8182vw), 5rem);
+  line-height: 90%;
 }
 
 body {
-  color: black;
+  color: var(--primary-dk);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   min-height: 100vh;
-  background-color: #f9f9f9;
+  background-color: var(--light);
 }
 
 .hidden {
@@ -47,14 +56,6 @@ body {
   opacity: 1;
   filter: blur(0);
   transform: scale(1);
-}
-
-.title {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: min(calc(1.1364rem + 6.8182vw), 5rem);
-  letter-spacing: -3px;
-  line-height: 80%;
 }
 
 .hero__wrapper {
@@ -83,7 +84,6 @@ body {
   justify-self: right;
   align-self: center;
   text-align: right;
-  width: 50vw;
   padding-right: 1rem;
 }
 
@@ -99,7 +99,6 @@ body {
   grid-area: 3 / 1;
   justify-self: left;
   align-self: center;
-  width: 50vw;
   padding-left: 1rem;
 }
 
@@ -123,6 +122,7 @@ body {
 }
 
 .about__title {
+  color: var(--primary-dk);
   position: relative;
   font-size: min(calc(1.1364rem + 6.8182vw), 5rem);
   font-weight: normal;
@@ -149,12 +149,6 @@ body {
   filter: contrast(1.2) brightness(1.1) drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.3));
 }
 
-.questions-link {
-  position: relative;
-  color: #BF6868;
-  animation: color-shift 3s linear infinite;
-}
-
 .questions-link img {
   display: inline-block;
   height: 40px;
@@ -179,12 +173,15 @@ body {
 }
 
 .faq__question {
+  color: var(--primary-dk);
   position: relative;
   font-size: min(calc(1.1364rem + 6.8182vw), 5rem);
   font-weight: normal;
   margin-bottom: 1rem;
   line-height: 80%;
 }
+
+.faq__question {}
 
 .faq__answer {
   line-height: 120%;
@@ -193,8 +190,8 @@ body {
 }
 
 .keyword {
-  color: #BF6868;
-  font-weight: bold;
+  color: var(--primary);
+  font-weight: 900;
 }
 
 @keyframes bounce {
@@ -221,24 +218,6 @@ body {
   }
   100% {
     transform: rotate(-30deg);
-  }
-}
-
-@keyframes color-shift {
-  0% {
-    color: #ff595e;
-  }
-  25% {
-    color: #ffca3a;
-  }
-  50% {
-    color: #8ac926;
-  }
-  75% {
-    color: #1982c4;
-  }
-  100% {
-    color: #ff595e;
   }
 }
 
