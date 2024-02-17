@@ -26,7 +26,7 @@ video {
 a {
   text-decoration: none;
   color: #BF6868;
-  animation: color-shift 2s infinite both;
+  animation: color-shift 3s linear infinite;
 }
 
 body {
@@ -151,6 +151,8 @@ body {
 
 .questions-link {
   position: relative;
+  color: #BF6868;
+  animation: color-shift 3s linear infinite;
 }
 
 .questions-link img {
@@ -224,16 +226,19 @@ body {
 
 @keyframes color-shift {
   0% {
-    filter: hue-rotate(0);
-    -webkit-filter: hue-rotate(0);
+    color: #ff595e;
+  }
+  25% {
+    color: #ffca3a;
   }
   50% {
-    filter: hue-rotate(-180deg);
-    -webkit-filter: hue-rotate(-180deg);
+    color: #8ac926;
+  }
+  75% {
+    color: #1982c4;
   }
   100% {
-    filter: hue-rotate(0);
-    -webkit-filter: hue-rotate(0);
+    color: #ff595e;
   }
 }
 
