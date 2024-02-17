@@ -225,12 +225,15 @@ body {
 @keyframes color-shift {
   0% {
     filter: hue-rotate(0);
+    -webkit-filter: hue-rotate(0);
   }
   50% {
     filter: hue-rotate(-180deg);
+    -webkit-filter: hue-rotate(-180deg);
   }
   100% {
     filter: hue-rotate(0);
+    -webkit-filter: hue-rotate(0);
   }
 }
 
