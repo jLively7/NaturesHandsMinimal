@@ -125,7 +125,7 @@ body {
 .about__title {
   position: relative;
   font-size: min(calc(1.1364rem + 6.8182vw), 5rem);
-  font-weight: 800;
+  font-weight: normal;
   margin-bottom: 1rem;
 }
 
@@ -179,7 +179,7 @@ body {
 .faq__question {
   position: relative;
   font-size: min(calc(1.1364rem + 6.8182vw), 5rem);
-  font-weight: 800;
+  font-weight: normal;
   margin-bottom: 1rem;
   line-height: 80%;
 }
@@ -192,6 +192,7 @@ body {
 
 .keyword {
   color: #BF6868;
+  font-weight: bold;
 }
 
 @keyframes bounce {
@@ -242,6 +243,15 @@ body {
   }
   100% {
     transform: scale(1.1);
+  }
+}
+
+@keyframes color-fade {
+  from {
+    color: black;
+  }
+  to {
+    color: #BF6868;
   }
 }
 
