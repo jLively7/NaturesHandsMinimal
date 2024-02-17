@@ -167,7 +167,7 @@ body {
   padding: 1rem;
 }
 
-.questions-card {
+.faq-card {
   display: inline-block;
   position: relative;
   background-color: var(--primary);
@@ -177,7 +177,7 @@ body {
   flex: 1 1 300px;
 }
 
-.questions-card__title {
+.faq-card__title {
   color: var(--primary-dk);
   position: relative;
   font-size: 1.8rem;
@@ -190,7 +190,7 @@ body {
   font-weight: 900;
 }
 
-.questions-card p {
+.faq-card p {
   color: var(--light);
   margin-top: -.5rem;
   position: relative;
